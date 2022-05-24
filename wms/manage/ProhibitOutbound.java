@@ -5,6 +5,7 @@ package com.wms.manage;
  */
 public class ProhibitOutbound {
 
+    private int prohibit_outbound_id;
     private int goods_id;
     private String goods_name;
     private int supplier_id;
@@ -13,7 +14,8 @@ public class ProhibitOutbound {
     private String customer_address;
     private int warehouse_id;
 
-    public ProhibitOutbound(int goods_id, String goods_name, int supplier_id, String supplier_name, int customer_id, String customer_address, int warehouse_id) {
+    public ProhibitOutbound(int prohibit_outbound_id, int goods_id, String goods_name, int supplier_id, String supplier_name, int customer_id, String customer_address, int warehouse_id) {
+        this.prohibit_outbound_id = prohibit_outbound_id;
         this.goods_id = goods_id;
         this.goods_name = goods_name;
         this.supplier_id = supplier_id;
@@ -21,6 +23,14 @@ public class ProhibitOutbound {
         this.customer_id = customer_id;
         this.customer_address = customer_address;
         this.warehouse_id = warehouse_id;
+    }
+
+    public int getProhibit_outbound_id() {
+        return prohibit_outbound_id;
+    }
+
+    public void setProhibit_outbound_id(int prohibit_outbound_id) {
+        this.prohibit_outbound_id = prohibit_outbound_id;
     }
 
     public int getGoods_id() {

@@ -9,9 +9,10 @@ public class ProhibitIncoming {
     private String goods_name;
     private int supplier_id;
 
-    public ProhibitIncoming(int prohibit_incoming_id, int goods_id, int supplier_id) {
+    public ProhibitIncoming(int prohibit_incoming_id, int goods_id, String goods_name, int supplier_id) {
         this.prohibit_incoming_id = prohibit_incoming_id;
         this.goods_id = goods_id;
+        this.goods_name = goods_name;
         this.supplier_id = supplier_id;
     }
 

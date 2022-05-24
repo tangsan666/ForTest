@@ -1,11 +1,9 @@
-package wms.manage;
-
-import wms.manage.Order;
+package com.wms.manage;
 
 /**
  * 出库订单
  */
-public class OutboundOrder extends Order {
+public class OutboundOrder {
     private int outbound_order_id;
     private int goods_id;
     private String goods_name;
@@ -22,17 +20,7 @@ public class OutboundOrder extends Order {
     private int warehouse_id;
     private int common_administrator_id;
 
-
-
-    public OutboundOrder() {
-        super();
-    }
-
-    public OutboundOrder(String status, int outbound_order_id, int goods_id, String goods_name,
-                         int goods_number, double goods_price, String goods_type, int customer_id,
-                         String customer_phone, String customer_address, int driver_id, String order_status,
-                         String create_time, String complete_time, int warehouse_id, int common_administrator_id) {
-        super(status);
+    public OutboundOrder(int outbound_order_id, int goods_id, String goods_name, int goods_number, double goods_price, String goods_type, int customer_id, String customer_phone, String customer_address, int driver_id, String order_status, String create_time, String complete_time, int warehouse_id, int common_administrator_id) {
         this.outbound_order_id = outbound_order_id;
         this.goods_id = goods_id;
         this.goods_name = goods_name;
