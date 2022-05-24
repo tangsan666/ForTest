@@ -1,6 +1,8 @@
 package com.wms.administrator;
 
 import com.wms.manage.Goods;
+import com.wms.manage.OutboundOrder;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
@@ -74,9 +76,5 @@ public class CommonAdministrator {
 
     private ArrayList<Goods> get_goods(String goods_name, String supplier_name, String incoming_time){  // 库存查询
         return null;
-    }
-
-    private boolean change_password(){
-        return true;
     }
 }

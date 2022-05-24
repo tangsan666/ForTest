@@ -4,6 +4,9 @@ package com.wms.manage;
  * 货物
  */
 public class Goods {
+    public static Goods goods_1;
+    public static Goods goods_2;
+
     private int goods_id;
     private String goods_name;
     private double goods_price;
@@ -37,5 +40,10 @@ public class Goods {
 
     public void setGoods_price(double goods_price) {
         this.goods_price = goods_price;
+    }
+
+    public static void main(String[] args) {
+        goods_1 = new Goods(1, "男鞋", 52.0);
+        goods_2 = new Goods(2, "女装", 100.0);
     }
 }

@@ -4,16 +4,30 @@ package com.wms.manage;
  * 仓库管理
  */
 public class WarehouseManagement {
+    public static WarehouseManagement warehouseManagement_1;
+    public static WarehouseManagement warehouseManagement_2;
+    public static WarehouseManagement warehouseManagement_3;
+
     private int warehouse_id;
     private int goods_id;
     private String operation_time;
     private double current_stock;
+    private double max_stock;
 
-    public WarehouseManagement(int warehouse_id, int goods_id, String operation_time, double current_stock) {
+    public WarehouseManagement(int warehouse_id, int goods_id, String operation_time, double current_stock, double max_stock) {
         this.warehouse_id = warehouse_id;
         this.goods_id = goods_id;
         this.operation_time = operation_time;
         this.current_stock = current_stock;
+        this.max_stock = max_stock;
+    }
+
+    public double getMax_stock() {
+        return max_stock;
+    }
+
+    public void setMax_stock(double max_stock) {
+        this.max_stock = max_stock;
     }
 
     public int getWarehouse_id() {
@@ -46,5 +60,11 @@ public class WarehouseManagement {
 
     public void setCurrent_stock(double current_stock) {
         this.current_stock = current_stock;
+    }
+
+    public static void main(String[] args) {
+        warehouseManagement_1 = new WarehouseManagement(Warehouse.warehouse_1.getWarehouse_id(), Goods.goods_1.getGoods_id(), "06:00-22:00", 900.0, 1000.0);
+        warehouseManagement_2 = new WarehouseManagement(Warehouse.warehouse_2.getWarehouse_id(), Goods.goods_2.getGoods_id(), "06:00-22:00", 800.0, 830.0);
+        warehouseManagement_3 = new WarehouseManagement(Warehouse.warehouse_3.getWarehouse_id(), Goods.goods_1.getGoods_id(), "06:00-22:00", 440.0, 500.0);
     }
 }

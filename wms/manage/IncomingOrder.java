@@ -20,4 +20,5 @@ public class IncomingOrder {
     private String complete_time;
     private int warehouse_id;
     private int common_administrator_id;
+
 }

@@ -4,6 +4,10 @@ package com.wms.role;
  * 货运司机
  */
 public class FreightDrivers {
+    public static FreightDrivers freightDrivers_1;
+    public static FreightDrivers freightDrivers_2;
+    public static FreightDrivers freightDrivers_3;
+
     private int driver_id;
     private String driver_name;
     private String driver_phone;
@@ -56,5 +60,11 @@ public class FreightDrivers {
 
     public void setDriver_license(String driver_license) {
         this.driver_license = driver_license;
+    }
+
+    public static void main(String[] args) {
+        freightDrivers_1 = new FreightDrivers(1, "大乔", "1616510", 30, "A");
+        freightDrivers_2 = new FreightDrivers(2, "孙策", "63453", 31, "A");
+        freightDrivers_3 = new FreightDrivers(3, "周瑜", "4345354", 32, "A");
     }
 }

@@ -4,6 +4,7 @@ package com.wms.manage;
  * 禁止出库
  */
 public class ProhibitOutbound {
+
     private int goods_id;
     private String goods_name;
     private int supplier_id;

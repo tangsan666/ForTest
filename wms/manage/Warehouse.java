@@ -1,9 +1,14 @@
 package com.wms.manage;
 
+import com.wms.role.WarehouseKeeper;
 /**
  * 仓库
  */
 public class Warehouse {
+    public static Warehouse warehouse_1;
+    public static Warehouse warehouse_2;
+    public static Warehouse warehouse_3;
+
     private int warehouse_id;
     private String warehouse_name;
     private String warehouse_address;
@@ -56,5 +61,11 @@ public class Warehouse {
 
     public void setWarehouse_keeper_name(String warehouse_keeper_name) {
         this.warehouse_keeper_name = warehouse_keeper_name;
+    }
+
+    public static void main(String[] args) {
+        warehouse_1 = new Warehouse(1, "1号仓库", "新疆", WarehouseKeeper.keeper_1.getKeeper_id(), WarehouseKeeper.keeper_1.getKeeper_name());
+        warehouse_2 = new Warehouse(2, "2号仓库", "甘肃", WarehouseKeeper.keeper_2.getKeeper_id(), WarehouseKeeper.keeper_2.getKeeper_name());
+        warehouse_3 = new Warehouse(3, "3号仓库", "西藏", WarehouseKeeper.keeper_3.getKeeper_id(), WarehouseKeeper.keeper_3.getKeeper_name());
     }
 }
