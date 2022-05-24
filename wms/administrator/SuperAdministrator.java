@@ -2,7 +2,8 @@ package com.wms.administrator;
 
 import com.wms.manage.Goods;
 import com.wms.manage.IncomingOrder;
-import com.wms.manage.OutboundOrder;
+
+import wms.manage.OutboundOrder;
 
 import java.util.ArrayList;
 

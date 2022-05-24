@@ -4,8 +4,9 @@ package com.wms.manage;
  * 货物
  */
 public class Goods {
-    public static Goods goods_1;
-    public static Goods goods_2;
+    public static Goods goods1;
+    public static Goods goods2;
+
 
     private int goods_id;
     private String goods_name;
@@ -16,6 +17,9 @@ public class Goods {
         this.goods_id = goods_id;
         this.goods_name = goods_name;
         this.goods_price = goods_price;
+    }
+
+    public Goods() {
     }
 
     public int getGoods_id() {
@@ -43,7 +47,9 @@ public class Goods {
     }
 
     public static void main(String[] args) {
-        goods_1 = new Goods(1, "男鞋", 52.0);
-        goods_2 = new Goods(2, "女装", 100.0);
+        Goods goods1 = new Goods();
+        Goods goods2 = new Goods();
     }
+
+
 }

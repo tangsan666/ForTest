@@ -1,8 +1,10 @@
-package com.wms.administrator;
+package wms.administrator;
 
 import com.wms.manage.Goods;
-import com.wms.manage.OutboundOrder;
-import org.junit.Test;
+import com.wms.manage.IncomingOrder;
+
+import wms.manage.Order;
+import wms.manage.OutboundOrder;
 
 import java.util.ArrayList;
 
@@ -65,16 +67,22 @@ public class CommonAdministrator {
         this.password = password;
     }
 
-    private boolean create_outbound_order(){    // 创建出库订单
-        return true;
+    public Order create_outbound_order(){    // 创建出库订单
+        Order outboundOrder = new OutboundOrder();
+        return outboundOrder;
     }
 
-    private boolean create_incoming_order(){    // 创建入库订单
+    public Order create_incoming_order(){    // 创建入库订单
         String sql= "insert ";
-        return true;
+        Order incomingOrder = new IncomingOrder();
+        return incomingOrder;
     }
 
-    private ArrayList<Goods> get_goods(String goods_name, String supplier_name, String incoming_time){  // 库存查询
-        return null;
+    public ArrayList<com.wms.manage.Goods> get_goods(String goods_name, String supplier_name, String Goods_status,String incoming_time){  // 库存查询
+        return new ArrayList<Goods>();
+    }
+
+    public void set_Goods_Status(Order order,String s){
+        order.setStatus(s);
     }
 }
